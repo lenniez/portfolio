@@ -197,6 +197,14 @@
     width:100%; height:100%; display:block;
     border-radius:16px; object-fit:cover; object-position:center;
   }
+  .shot.real.brand{
+    display:flex; align-items:center; justify-content:center;
+    background:var(--brand-bg);
+  }
+  .shot.real.brand img{
+    width:auto; height:100%; max-width:100%;
+    object-fit:contain; object-position:center;
+  }
   .shot.illus{
     display:block; border:1px solid var(--line);
     background:color-mix(in srgb, var(--shot-c, var(--accent)) 7%, var(--surface));
@@ -703,13 +711,8 @@
         <div class="shot-wrap">
           <div class="carousel" style="--car-c:var(--accent)">
             <div class="carousel-track">
-              <div class="shot slide" style="--shot-c:var(--accent)">
-                <div class="chrome"><span></span><span></span><span></span></div>
-                <div class="body">
-                  <div class="bar" style="width:40%"></div>
-                  <div class="blockrow"><div class="block"></div><div class="block"></div></div>
-                </div>
-                <div class="label">Add screenshot — The Twist</div>
+              <div class="shot real brand slide" style="--brand-bg:#5AB4D9">
+                <img src="images/the-twist-1.png" alt="The Twist logo: a stylized twisting ribbon beneath a yellow sun">
               </div>
             </div>
           </div>
