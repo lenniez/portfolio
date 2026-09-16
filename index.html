@@ -15,6 +15,10 @@
     --accent-2-soft:#E4ECFF;
     --accent-3:#16A34A;
     --accent-3-soft:#DCF5E4;
+    --accent-4:#E8709A;
+    --accent-4-soft:#FBE3EC;
+    --tall-bg-1:#EFE7D8;
+    --tall-bg-2:#E1D8C6;
     --shadow: 0 1px 2px rgba(20,18,10,.04), 0 14px 32px -18px rgba(20,18,10,.16);
     --shadow-lg: 0 4px 8px rgba(20,18,10,.05), 0 22px 40px -18px rgba(20,18,10,.22);
   }
@@ -32,6 +36,10 @@
       --accent-2-soft:#1B2540;
       --accent-3:#3ECB7A;
       --accent-3-soft:#123321;
+      --accent-4:#FF92B4;
+      --accent-4-soft:#3B1F2A;
+      --tall-bg-1:#26272C;
+      --tall-bg-2:#1B1C20;
       --shadow: 0 1px 2px rgba(0,0,0,.35), 0 20px 48px -20px rgba(0,0,0,.65);
       --shadow-lg: 0 4px 10px rgba(0,0,0,.4), 0 28px 56px -20px rgba(0,0,0,.75);
     }
@@ -49,6 +57,10 @@
     --accent-2-soft:#1B2540;
     --accent-3:#3ECB7A;
     --accent-3-soft:#123321;
+    --accent-4:#FF92B4;
+    --accent-4-soft:#3B1F2A;
+    --tall-bg-1:#26272C;
+    --tall-bg-2:#1B1C20;
     --shadow: 0 1px 2px rgba(0,0,0,.35), 0 20px 48px -20px rgba(0,0,0,.65);
     --shadow-lg: 0 4px 10px rgba(0,0,0,.4), 0 28px 56px -20px rgba(0,0,0,.75);
   }
@@ -175,18 +187,21 @@
   .shot.real img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
   .shot.real.tall{
     display:flex; align-items:center; justify-content:center;
-    background:
-      radial-gradient(120% 85% at 50% 0%,
-        color-mix(in srgb, var(--shot-c, var(--accent)) 24%, var(--surface)) 0%,
-        transparent 68%),
-      linear-gradient(165deg,
-        color-mix(in srgb, var(--shot-c, var(--accent)) 15%, var(--surface-soft)) 0%,
-        color-mix(in srgb, var(--shot-c, var(--accent)) 4%, var(--surface)) 100%);
+    background:linear-gradient(165deg, var(--tall-bg-1) 0%, var(--tall-bg-2) 100%);
   }
-  .shot.real.tall img{
-    width:auto; height:100%; max-width:100%;
-    object-fit:contain; object-position:center;
-    filter:drop-shadow(0 6px 18px rgba(20,18,10,.22));
+  .shot.real.tall .phone{
+    position:relative; height:100%; aspect-ratio:375/812;
+    padding:4px; border-radius:20px;
+    background:linear-gradient(158deg,#43454B 0%,#232428 46%,#141518 100%);
+    box-shadow:0 10px 24px rgba(20,18,10,.30), 0 2px 6px rgba(20,18,10,.18);
+  }
+  .shot.real.tall .phone::before{
+    content:""; position:absolute; inset:0; border-radius:20px; pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);
+  }
+  .shot.real.tall .phone img{
+    width:100%; height:100%; display:block;
+    border-radius:16px; object-fit:cover; object-position:center;
   }
   .shot.illus{
     display:block; border:1px solid var(--line);
@@ -645,13 +660,8 @@
         <div class="shot-wrap">
           <div class="carousel" style="--car-c:var(--accent-2)">
             <div class="carousel-track">
-              <div class="shot slide" style="--shot-c:var(--accent-2)">
-                <div class="chrome"><span></span><span></span><span></span></div>
-                <div class="body">
-                  <div class="bar" style="width:38%"></div>
-                  <div class="blockrow"><div class="block"></div><div class="block"></div></div>
-                </div>
-                <div class="label">Add screenshot — Her Next Words</div>
+              <div class="shot real slide" style="--shot-c:var(--accent-2)">
+                <img src="images/her-next-words-1.jpg" alt="Her Next Words: a daily writing prompt with a note from her kids">
               </div>
             </div>
           </div>
@@ -669,12 +679,14 @@
       </div>
 
 
-      <div class="proj-card" style="--card-c:var(--accent-3)">
+      <div class="proj-card" style="--card-c:var(--accent-4)">
         <div class="shot-wrap">
-          <div class="carousel" style="--car-c:var(--accent-3)">
+          <div class="carousel" style="--car-c:var(--accent-4)">
             <div class="carousel-track">
-              <div class="shot real tall slide" style="--shot-c:var(--accent-3)">
-                <img src="images/curtn-1.png" alt="Curtn mobile app: a video dating profile with a conversation prompt and like controls">
+              <div class="shot real tall slide" style="--shot-c:var(--accent-4)">
+                <div class="phone">
+                  <img src="images/curtn-1.png" alt="Curtn mobile app: a video dating profile with a conversation prompt and like controls">
+                </div>
               </div>
             </div>
           </div>
