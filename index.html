@@ -17,6 +17,7 @@
     --accent-3-soft:#DCF5E4;
     --accent-4:#E8709A;
     --accent-4-soft:#FBE3EC;
+    --nav-lane:140px;
     --shadow: 0 1px 2px rgba(20,18,10,.04), 0 14px 32px -18px rgba(20,18,10,.16);
     --shadow-lg: 0 4px 8px rgba(20,18,10,.05), 0 22px 40px -18px rgba(20,18,10,.22);
   }
@@ -125,8 +126,11 @@
   /* The nav is fixed to the right edge while content is a centred 1120px
      column, so below ~1350px the two collide. Hidden under 1400px, which
      keeps at least ~25px of clearance whenever it is shown. */
-  @media (max-width: 1400px){
-    .floatnav{ display:none; }
+  /* Reserve a lane on the right so the fixed nav always has its own
+     column and body content shrinks to fit beside it, rather than the
+     two overlapping. Holds a constant ~25px gap at every width. */
+  @media (min-width: 861px){
+    body{ padding-right:var(--nav-lane); }
   }
 
   /* ---------- hero ---------- */
@@ -291,7 +295,7 @@
   .product p.story{ color:var(--ink-soft); font-size:15px; line-height:1.65; }
 
   /* ---------- side project grid ---------- */
-  .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px 22px; }
+  .grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:26px 22px; }
   .proj-card{
     background:var(--surface); border:1px solid var(--line); border-radius:16px;
     padding:16px; padding-top:22px; box-shadow:var(--shadow);
@@ -337,7 +341,7 @@
   .foot-fine{ color:var(--ink-soft); font-size:12.5px; margin-top:8px; }
 
   @media (max-width: 860px){
-    .grid{ grid-template-columns:repeat(2,1fr); }
+    .floatnav{ display:none; }
   }
   @media (max-width: 560px){
     .grid{ grid-template-columns:1fr; }
