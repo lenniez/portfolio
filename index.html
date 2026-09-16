@@ -102,7 +102,7 @@
   /* ---------- floating nav ---------- */
   .floatnav{
     position:fixed; z-index:60;
-    top:26px; right:22px;
+    top:54px; right:22px;
     display:flex; flex-direction:column; align-items:flex-end; gap:14px;
   }
   .floatnav a{
@@ -122,10 +122,10 @@
   }
   .floatnav a:hover{ color:var(--accent); }
   .floatnav a:hover::after{ transform:scaleX(1) rotate(-3deg); }
-  @media (max-width: 768px){
-    /* Hidden on mobile: the bar overlapped page content, and under quirks
-       mode its left:50% resolved against the page's overflow width rather
-       than the viewport, pushing it off the right edge. */
+  /* The nav is fixed to the right edge while content is a centred 1120px
+     column, so below ~1350px the two collide. Hidden under 1400px, which
+     keeps at least ~25px of clearance whenever it is shown. */
+  @media (max-width: 1400px){
     .floatnav{ display:none; }
   }
 
@@ -597,7 +597,7 @@
         <h3>Find My "In": LinkedIn Search Agent</h3>
         <p>Given a list of companies, searches LinkedIn for personal connections, alumni from past jobs, product leaders, and recruiters when user is seeking a referral for a job application.</p>
         <div class="proj-foot">
-          <span class="pill">Automation</span>
+          <span class="pill">Agent</span>
           <div class="proj-links">
             <a class="visit" href="https://github.com/lenniez/findmyin" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
@@ -654,7 +654,7 @@
         <h3>Job Search Agent</h3>
         <p>An AI agent that scans job listings from 200+ companies every day, populated by category, scores them against my own criteria, and exports a spreadsheet of the strongest matches with open PM roles — no more manually trawling boards.</p>
         <div class="proj-foot">
-          <span class="pill">Automation</span>
+          <span class="pill">Agent</span>
           <div class="proj-links">
             <a class="visit" href="https://github.com/lenniez/jobsearchagent" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
@@ -721,7 +721,7 @@
         <h3>The Twist: Remote Hangout App</h3>
         <p>Just for fun - an app that helps users come up with fun remote gathering activities and gets them scheduled.</p>
         <div class="proj-foot">
-          <span class="pill">Web app</span>
+          <span class="pill">Mobile app</span>
           <div class="proj-links">
             <a class="visit" href="https://github.com/iainnash/with-a-twist" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
