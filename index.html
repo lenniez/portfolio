@@ -173,6 +173,15 @@
   }
   .shot.real{ border:1px solid var(--line); background:var(--surface); display:block; }
   .shot.real img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
+  .shot.illus{
+    display:block; border:1px solid var(--line);
+    background:color-mix(in srgb, var(--shot-c, var(--accent)) 7%, var(--surface));
+  }
+  .shot.illus svg{ display:block; width:100%; height:100%; }
+  .illus-cap{
+    font-family:'IBM Plex Mono', monospace; font-size:8px; letter-spacing:.09em;
+    fill:var(--ink-soft); text-transform:uppercase;
+  }
   .shot .chrome{ display:flex; gap:6px; padding:10px 12px; border-bottom:1px solid var(--line); flex:none; }
   .shot .chrome span{ width:8px;height:8px;border-radius:50%; background:var(--line); }
   .shot .body{ flex:1; position:relative; padding:16px; display:flex; flex-direction:column; gap:10px; }
@@ -517,13 +526,37 @@
         <div class="shot-wrap">
           <div class="carousel" style="--car-c:var(--accent-3)">
             <div class="carousel-track">
-              <div class="shot slide" style="--shot-c:var(--accent-3)">
-                <div class="chrome"><span></span><span></span><span></span></div>
-                <div class="body">
-                  <div class="bar" style="width:52%"></div>
-                  <div class="blockrow"><div class="block"></div><div class="block"></div></div>
-                </div>
-                <div class="label">Add screenshot — Find My "In"</div>
+              <div class="shot illus slide" style="--shot-c:var(--accent-3)">
+                <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: a network of contacts with one highlighted referral path from you to a target company">
+                  <g stroke="var(--ink-soft)" opacity=".26" stroke-width="1.4" fill="none">
+                    <line x1="46" y1="122" x2="112" y2="44"/>
+                    <line x1="112" y1="44" x2="252" y2="47"/>
+                    <line x1="46" y1="122" x2="170" y2="136"/>
+                    <line x1="170" y1="136" x2="238" y2="120"/>
+                    <line x1="238" y1="120" x2="256" y2="78"/>
+                  </g>
+                  <polyline points="46,122 120,100 196,68 252,58" fill="none" stroke="var(--shot-c, var(--accent))" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <g fill="var(--ink-soft)" opacity=".22">
+                    <circle cx="112" cy="44" r="8"/>
+                    <circle cx="170" cy="136" r="8"/>
+                    <circle cx="238" cy="120" r="8"/>
+                  </g>
+                  <g fill="var(--surface)" stroke="var(--shot-c, var(--accent))" stroke-width="2">
+                    <circle cx="120" cy="100" r="9.5"/>
+                    <circle cx="196" cy="68" r="9.5"/>
+                  </g>
+                  <circle cx="46" cy="122" r="13" fill="var(--shot-c, var(--accent))" fill-opacity=".16" stroke="var(--shot-c, var(--accent))" stroke-width="2"/>
+                  <circle cx="46" cy="122" r="4.5" fill="var(--shot-c, var(--accent))"/>
+                  <rect x="252" y="40" width="44" height="36" rx="10" fill="var(--shot-c, var(--accent))" fill-opacity=".1" stroke="var(--shot-c, var(--accent))" stroke-width="2"/>
+                  <g fill="var(--shot-c, var(--accent))" opacity=".6">
+                    <rect x="262" y="51" width="7" height="7" rx="2"/>
+                    <rect x="276" y="51" width="7" height="7" rx="2"/>
+                    <rect x="262" y="62" width="7" height="7" rx="2"/>
+                    <rect x="276" y="62" width="7" height="7" rx="2"/>
+                  </g>
+                  <text class="illus-cap" x="46" y="148" text-anchor="middle">You</text>
+                  <text class="illus-cap" x="274" y="92" text-anchor="middle">Target</text>
+                </svg>
               </div>
             </div>
           </div>
@@ -540,13 +573,44 @@
         <div class="shot-wrap">
           <div class="carousel" style="--car-c:var(--accent)">
             <div class="carousel-track">
-              <div class="shot slide" style="--shot-c:var(--accent)">
-                <div class="chrome"><span></span><span></span><span></span></div>
-                <div class="body">
-                  <div class="bar" style="width:45%"></div>
-                  <div class="blockrow"><div class="block"></div><div class="block"></div></div>
-                </div>
-                <div class="label">Add screenshot — Job Search Agent</div>
+              <div class="shot illus slide" style="--shot-c:var(--accent)">
+                <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: a grid of company listings feeds an agent that scores them and outputs a ranked shortlist">
+                  <g fill="var(--ink-soft)" opacity=".22">
+        <rect x="22" y="52" width="18" height="13" rx="3"/>
+        <rect x="44" y="52" width="18" height="13" rx="3"/>
+        <rect x="66" y="52" width="18" height="13" rx="3"/>
+        <rect x="88" y="52" width="18" height="13" rx="3"/>
+        <rect x="22" y="71" width="18" height="13" rx="3"/>
+        <rect x="66" y="71" width="18" height="13" rx="3"/>
+        <rect x="88" y="71" width="18" height="13" rx="3"/>
+        <rect x="22" y="90" width="18" height="13" rx="3"/>
+        <rect x="44" y="90" width="18" height="13" rx="3"/>
+        <rect x="66" y="90" width="18" height="13" rx="3"/>
+                  </g>
+                  <g fill="var(--shot-c, var(--accent))" opacity=".55">
+                    <rect x="44" y="71" width="18" height="13" rx="3"/>
+                    <rect x="88" y="90" width="18" height="13" rx="3"/>
+                  </g>
+                  <g stroke="var(--ink-soft)" opacity=".4" stroke-width="1.4" stroke-linecap="round">
+                    <line x1="112" y1="77.5" x2="128" y2="77.5"/>
+                    <line x1="190" y1="77.5" x2="206" y2="77.5"/>
+                  </g>
+                  <g fill="var(--ink-soft)" opacity=".4">
+                    <polygon points="128,73.5 135,77.5 128,81.5"/>
+                    <polygon points="206,73.5 213,77.5 206,81.5"/>
+                  </g>
+                  <rect x="138" y="56" width="44" height="44" rx="13" fill="var(--shot-c, var(--accent))" fill-opacity=".12" stroke="var(--shot-c, var(--accent))" stroke-width="1.8"/>
+                  <path d="M160 65 L163.4 74.6 L173 78 L163.4 81.4 L160 91 L156.6 81.4 L147 78 L156.6 74.6 Z" fill="var(--shot-c, var(--accent))"/>
+                  <rect x="214" y="52" width="84" height="15" rx="4" fill="var(--shot-c, var(--accent))"/>
+                  <rect x="221" y="57.5" width="36" height="4" rx="2" fill="var(--surface)" opacity=".9"/>
+                  <rect x="214" y="71" width="84" height="15" rx="4" fill="var(--ink-soft)" opacity=".18"/>
+                  <rect x="221" y="76.5" width="46" height="4" rx="2" fill="var(--ink-soft)" opacity=".38"/>
+                  <rect x="214" y="90" width="84" height="15" rx="4" fill="var(--ink-soft)" opacity=".13"/>
+                  <rect x="221" y="95.5" width="30" height="4" rx="2" fill="var(--ink-soft)" opacity=".32"/>
+                  <text class="illus-cap" x="64" y="121" text-anchor="middle">Companies</text>
+                  <text class="illus-cap" x="160" y="121" text-anchor="middle">Agent</text>
+                  <text class="illus-cap" x="256" y="121" text-anchor="middle">Shortlist</text>
+                </svg>
               </div>
             </div>
           </div>
