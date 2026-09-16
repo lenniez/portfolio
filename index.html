@@ -117,11 +117,10 @@
   .floatnav a:hover{ color:var(--accent); }
   .floatnav a:hover::after{ transform:scaleX(1) rotate(-3deg); }
   @media (max-width: 768px){
-    .floatnav{
-      top:auto; right:auto; left:50%; transform:translateX(-50%);
-      bottom:calc(16px + env(safe-area-inset-bottom, 0px));
-      flex-direction:row; align-items:center; gap:22px;
-    }
+    /* Hidden on mobile: the bar overlapped page content, and under quirks
+       mode its left:50% resolved against the page's overflow width rather
+       than the viewport, pushing it off the right edge. */
+    .floatnav{ display:none; }
   }
 
   /* ---------- hero ---------- */
@@ -194,11 +193,13 @@
   .car-btn{
     position:absolute; top:50%; transform:translateY(-50%) scale(1); z-index:3;
     width:30px; height:30px; border-radius:10px; border:none; cursor:pointer;
-    background:var(--surface); color:var(--ink); box-shadow:var(--shadow);
-    display:flex; align-items:center; justify-content:center; font-size:15px; line-height:1;
-    opacity:.9; padding:0; transition:opacity .15s, transform .15s;
+    background:rgba(16,17,21,.78); color:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.55) inset;
+    -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
+    display:flex; align-items:center; justify-content:center; font-size:17px; line-height:1;
+    opacity:1; padding:0; transition:background .15s, transform .15s;
   }
-  .car-btn:hover{ opacity:1; transform:translateY(-50%) scale(1.08); }
+  .car-btn:hover{ background:rgba(16,17,21,.93); transform:translateY(-50%) scale(1.08); }
   .car-btn:active{ transform:translateY(-50%) scale(0.92); }
   .car-btn.prev{ left:10px; }
   .car-btn.next{ right:10px; }
@@ -582,7 +583,7 @@
         <div class="proj-foot">
           <span class="pill">Web app</span>
           <div class="proj-links">
-            <a class="visit" href="https://hernextwords.netlify.app/" target="_blank" rel="noopener">Live <span class="arrow">↗</span></a>
+            <a class="visit" href="https://hernextwords.netlify.app/" target="_blank" rel="noopener">Web URL <span class="arrow">↗</span></a>
             <a class="visit" href="https://github.com/lenniez/hernextwords" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
         </div>
