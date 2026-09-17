@@ -33,7 +33,7 @@
     --accent-3-soft:#DCF5E4;
     --accent-4:#E8709A;
     --accent-4-soft:#FBE3EC;
-    --nav-lane:140px;
+    --nav-lane:160px;
     --shadow: 0 1px 2px rgba(20,18,10,.04), 0 14px 32px -18px rgba(20,18,10,.16);
     --shadow-lg: 0 4px 8px rgba(20,18,10,.05), 0 22px 40px -18px rgba(20,18,10,.22);
   }
@@ -89,7 +89,8 @@
     color:var(--ink);
     font-family:'Manrope', system-ui, -apple-system, "Segoe UI", sans-serif;
     font-weight:500;
-    padding-inline:22px;
+    letter-spacing:.012em;
+    padding-inline:32px;
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;}
@@ -97,7 +98,7 @@
     font-family:'Archivo', system-ui, sans-serif;
     font-weight:800;
     line-height:1.05;
-    letter-spacing:-0.015em;
+    letter-spacing:-0.004em;
     text-wrap:balance;
     margin:0;
   }
@@ -119,14 +120,14 @@
   /* ---------- floating nav ---------- */
   .floatnav{
     position:fixed; z-index:60;
-    top:54px; right:22px;
+    top:54px; right:32px;
     display:flex; flex-direction:column; align-items:flex-end; gap:14px;
   }
   .floatnav a{
     position:relative;
     text-decoration:none; white-space:nowrap;
     color:var(--ink); font-family:'Manrope', sans-serif;
-    font-size:14.5px; font-weight:700; line-height:1;
+    font-size:15.5px; font-weight:700; line-height:1;
     display:inline-block; padding-bottom:9px;
     transition:color .15s;
   }
@@ -158,7 +159,7 @@
     display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-bottom:22px;
   }
   .avatar{
-    width:64px; height:64px; border-radius:16px; object-fit:cover;
+    width:72px; height:72px; border-radius:18px; object-fit:cover;
     box-shadow:var(--shadow); flex:none;
     border:1px solid var(--line);
   }
