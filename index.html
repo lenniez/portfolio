@@ -371,7 +371,9 @@
   }
   @media (max-width: 560px){
     .grid{ grid-template-columns:1fr; }
-    footer{ flex-direction:column; align-items:flex-start; }
+    /* single column: no neighbouring card to align titles with */
+    .proj-card h3{ min-height:0; }
+    footer{ flex-direction:column; align-items:flex-start; padding-bottom:28px; }
   }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
