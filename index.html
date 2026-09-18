@@ -209,7 +209,7 @@
     background:color-mix(in srgb, var(--shot-c, var(--accent)) 7%, var(--surface));
   }
   .shot.real.tall .phone{
-    position:relative; height:100%; aspect-ratio:375/812;
+    position:relative; height:84%; aspect-ratio:375/812;
     padding:4px; border-radius:20px;
     background:linear-gradient(158deg,#43454B 0%,#232428 46%,#141518 100%);
     box-shadow:0 10px 24px rgba(20,18,10,.30), 0 2px 6px rgba(20,18,10,.18);
@@ -300,6 +300,10 @@
   .product:first-child{ padding-top:6px; }
   .product:last-child{ padding-bottom:6px; }
   .product .shot-wrap{ order:2; }
+  .via{
+    display:block; font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:.05em;
+    color:var(--ink-soft); margin:-4px 0 10px;
+  }
   .year{
     font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:.05em;
     color:var(--card-c, var(--accent)); display:block; margin-bottom:8px;
@@ -324,6 +328,8 @@
   }
   .proj-card p{ color:var(--ink-soft); font-size:13.8px; line-height:1.55; margin:0; flex:1; }
   .proj-foot{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .tags{ display:flex; align-items:center; gap:7px; }
+  .tags .pill + .pill::before{ content:"\00B7"; margin-right:7px; }
   .proj-links{ display:flex; align-items:center; gap:14px; }
   .visit{
     font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:700;
@@ -400,7 +406,7 @@
         <div class="carousel" style="--car-c:var(--accent-2)">
           <div class="carousel-track">
             <div class="shot real slide">
-              <img src="images/teachable-enterprise-1.jpg" style="object-position:left top">
+              <img src="images/teachable-enterprise-1.jpg" style="object-position:left top; transform:scale(1.035); transform-origin:left 59%">
             </div>
             <div class="shot real slide">
               <img src="images/teachable-enterprise-2.jpg">
@@ -463,7 +469,7 @@
               <img src="images/big-room-1.jpg">
             </div>
             <div class="shot real slide">
-              <img src="images/big-room-2.jpg" style="object-position:center 42%">
+              <img src="images/big-room-2.jpg" style="object-position:center 38.7%">
             </div>
             <div class="shot real slide">
               <img src="images/big-room-3.jpg">
@@ -480,6 +486,7 @@
       </div>
       <div>
         <span class="year">2023–2024</span>
+        <span class="via">Via 01 Labs Product Studio</span>
         <h3>Big Room</h3>
         <p class="story">Media companies and creators need to repurpose long-form videos into short-form vertical ones for YouTube Shorts and TikTok, but manual reformatting doesn't scale. I led the company to design and build an app from 0 to 1 that used proprietary AI to detect bodies, faces, and speech, and auto-convert landscape video into vertical formats. We had loyal users like Buzzfeed/Complex and Hot Ones.</p>
       </div>
@@ -497,6 +504,7 @@
       </div>
       <div>
         <span class="year">2021–2023</span>
+        <span class="via">Via 01 Labs Product Studio</span>
         <h3>HIFI: Enterprise</h3>
         <p class="story">Music accountants had been stitching together royalty data from dozens of disconnected sources by hand. I led the team to build an enterprise royalty analytics dashboard from 0 to scale — scraping and aggregating statements across 10+ services into one searchable, filterable repository. We onboarded royalty revenue from 300+ top artists including Lizzo, Billie Eilish, Bruce Springsteen, and Lil Nas X, which helped drive a $15M+ Series A, and the company was soon after acquired by Block.</p>
       </div>
@@ -527,6 +535,7 @@
       </div>
       <div>
         <span class="year">2021–2022</span>
+        <span class="via">Via 01 Labs Product Studio</span>
         <h3>Chartmetric: Dashboard, Artist Pages, Songwriters, Spotify for Artists</h3>
         <p class="story">Many of this industry-standard music analytics company's core experiences, such as the dashboard and artist pages, hadn't kept pace with how labels and managers actually used the product and were becoming extremely cluttered as more data sources were added in. I led user research and redesigned numerous existing and new frequently used features, and shipped one of the industry's first "Songwriter" pages, a groundbreaking new data source for music publishers and songwriters.</p>
       </div>
@@ -621,7 +630,7 @@
         <h3>Job Search Agent</h3>
         <p>Fetches new job postings from ~250 tracked companies (scraping Greenhouse/Lever/Ashby + Built In NYC) and scores them against a personal job rubric, then emails a digest of the strong matches. Runs entirely on GitHub Actions.</p>
         <div class="proj-foot">
-          <span class="pill">Agent</span>
+          <span class="tags"><span class="pill">Agent</span><span class="pill">Solo</span></span>
           <div class="proj-links">
             <a class="visit" href="https://github.com/lenniez/jobsearchagent" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
@@ -671,7 +680,7 @@
         <h3>Find My "In": LinkedIn Search Agent</h3>
         <p>Given a list of companies, searches LinkedIn for personal connections, alumni from past jobs, product leaders, and recruiters when user is seeking a referral for a job application.</p>
         <div class="proj-foot">
-          <span class="pill">Agent</span>
+          <span class="tags"><span class="pill">Agent</span><span class="pill">Solo</span></span>
           <div class="proj-links">
             <a class="visit" href="https://github.com/lenniez/findmyin" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
@@ -694,7 +703,7 @@
         <h3>Curtn: Video Dating Mobile App</h3>
         <p>A dating app built upon video profiles and video chatting — backed by Grindr founder Joel Simkhai and Sam Altman. Led product as a consultant.</p>
         <div class="proj-foot">
-          <span class="pill">Mobile app</span>
+          <span class="tags"><span class="pill">Mobile app</span><span class="pill">With friends</span></span>
           <div class="proj-links">
             <a class="visit" href="https://techcrunch.com/2020/05/04/sam-altman-backs-video-first-dating-app-curtn/" target="_blank" rel="noopener">Press <span class="arrow">↗</span></a>
           </div>
@@ -716,7 +725,7 @@
         <h3>Her Next Words: Writing Buddy</h3>
         <p>A daily writing companion built just for my mother-in-law, with rotating prompts on career, confidence, and storytelling, plus a built-in editor for drafting and revisiting pieces over time.</p>
         <div class="proj-foot">
-          <span class="pill">Web app</span>
+          <span class="tags"><span class="pill">Web app</span><span class="pill">Solo</span></span>
           <div class="proj-links">
             <a class="visit" href="https://hernextwords.netlify.app/" target="_blank" rel="noopener">Web URL <span class="arrow">↗</span></a>
             <a class="visit" href="https://github.com/lenniez/hernextwords" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
@@ -740,7 +749,7 @@
         <h3>The Twist: Remote Hangout App</h3>
         <p>Just for fun - an app that helps users come up with fun remote gathering activities and gets them scheduled.</p>
         <div class="proj-foot">
-          <span class="pill">Mobile app</span>
+          <span class="tags"><span class="pill">Mobile app</span><span class="pill">With friends</span></span>
           <div class="proj-links">
             <a class="visit" href="https://github.com/iainnash/with-a-twist" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
