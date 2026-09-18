@@ -222,14 +222,6 @@
     width:100%; height:100%; display:block;
     border-radius:16px; object-fit:cover; object-position:center;
   }
-  .shot.real.brand{
-    display:flex; align-items:center; justify-content:center;
-    background:var(--brand-bg);
-  }
-  .shot.real.brand img{
-    width:auto; height:100%; max-width:100%;
-    object-fit:contain; object-position:center;
-  }
   .shot.illus{
     display:block; border:1px solid var(--line);
     background:color-mix(in srgb, var(--shot-c, var(--accent)) 7%, var(--surface));
@@ -408,7 +400,7 @@
         <div class="carousel" style="--car-c:var(--accent-2)">
           <div class="carousel-track">
             <div class="shot real slide">
-              <img src="images/teachable-enterprise-1.jpg">
+              <img src="images/teachable-enterprise-1.jpg" style="object-position:left top">
             </div>
             <div class="shot real slide">
               <img src="images/teachable-enterprise-2.jpg">
@@ -471,7 +463,7 @@
               <img src="images/big-room-1.jpg">
             </div>
             <div class="shot real slide">
-              <img src="images/big-room-2.jpg">
+              <img src="images/big-room-2.jpg" style="object-position:center 42%">
             </div>
             <div class="shot real slide">
               <img src="images/big-room-3.jpg">
@@ -579,56 +571,6 @@
     </div>
 
     <div class="grid">
-      <div class="proj-card" style="--card-c:var(--accent-3)">
-        <div class="shot-wrap">
-          <div class="carousel" style="--car-c:var(--accent-3)">
-            <div class="carousel-track">
-              <div class="shot illus slide" style="--shot-c:var(--accent-3)">
-                <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: a network of contacts with one highlighted referral path from you to a target company">
-                  <g stroke="var(--ink-soft)" opacity=".26" stroke-width="1.4" fill="none">
-                    <line x1="46" y1="122" x2="112" y2="44"/>
-                    <line x1="112" y1="44" x2="252" y2="47"/>
-                    <line x1="46" y1="122" x2="170" y2="136"/>
-                    <line x1="170" y1="136" x2="238" y2="120"/>
-                    <line x1="238" y1="120" x2="256" y2="78"/>
-                  </g>
-                  <polyline points="46,122 120,100 196,68 252,58" fill="none" stroke="var(--shot-c, var(--accent))" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  <g fill="var(--ink-soft)" opacity=".22">
-                    <circle cx="112" cy="44" r="8"/>
-                    <circle cx="170" cy="136" r="8"/>
-                    <circle cx="238" cy="120" r="8"/>
-                  </g>
-                  <g fill="var(--surface)" stroke="var(--shot-c, var(--accent))" stroke-width="2">
-                    <circle cx="120" cy="100" r="9.5"/>
-                    <circle cx="196" cy="68" r="9.5"/>
-                  </g>
-                  <circle cx="46" cy="122" r="13" fill="var(--shot-c, var(--accent))" fill-opacity=".16" stroke="var(--shot-c, var(--accent))" stroke-width="2"/>
-                  <circle cx="46" cy="122" r="4.5" fill="var(--shot-c, var(--accent))"/>
-                  <rect x="252" y="40" width="44" height="36" rx="10" fill="var(--shot-c, var(--accent))" fill-opacity=".1" stroke="var(--shot-c, var(--accent))" stroke-width="2"/>
-                  <g fill="var(--shot-c, var(--accent))" opacity=".6">
-                    <rect x="262" y="51" width="7" height="7" rx="2"/>
-                    <rect x="276" y="51" width="7" height="7" rx="2"/>
-                    <rect x="262" y="62" width="7" height="7" rx="2"/>
-                    <rect x="276" y="62" width="7" height="7" rx="2"/>
-                  </g>
-                  <text class="illus-cap" x="46" y="148" text-anchor="middle">You</text>
-                  <text class="illus-cap" x="274" y="92" text-anchor="middle">Target</text>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <span class="year">2026</span>
-        <h3>Find My "In": LinkedIn Search Agent</h3>
-        <p>Given a list of companies, searches LinkedIn for personal connections, alumni from past jobs, product leaders, and recruiters when user is seeking a referral for a job application.</p>
-        <div class="proj-foot">
-          <span class="pill">Agent</span>
-          <div class="proj-links">
-            <a class="visit" href="https://github.com/lenniez/findmyin" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
-          </div>
-        </div>
-      </div>
-
       <div class="proj-card" style="--card-c:var(--accent)">
         <div class="shot-wrap">
           <div class="carousel" style="--car-c:var(--accent)">
@@ -686,28 +628,55 @@
         </div>
       </div>
 
-      <div class="proj-card" style="--card-c:var(--accent-2)">
+      <div class="proj-card" style="--card-c:var(--accent-3)">
         <div class="shot-wrap">
-          <div class="carousel" style="--car-c:var(--accent-2)">
+          <div class="carousel" style="--car-c:var(--accent-3)">
             <div class="carousel-track">
-              <div class="shot real slide" style="--shot-c:var(--accent-2)">
-                <img src="images/her-next-words-1.jpg" alt="Her Next Words: a daily writing prompt with a note from her kids">
+              <div class="shot illus slide" style="--shot-c:var(--accent-3)">
+                <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: a network of contacts with one highlighted referral path from you to a target company">
+                  <g stroke="var(--ink-soft)" opacity=".26" stroke-width="1.4" fill="none">
+                    <line x1="46" y1="122" x2="112" y2="44"/>
+                    <line x1="112" y1="44" x2="252" y2="47"/>
+                    <line x1="46" y1="122" x2="170" y2="136"/>
+                    <line x1="170" y1="136" x2="238" y2="120"/>
+                    <line x1="238" y1="120" x2="256" y2="78"/>
+                  </g>
+                  <polyline points="46,122 120,100 196,68 252,58" fill="none" stroke="var(--shot-c, var(--accent))" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <g fill="var(--ink-soft)" opacity=".22">
+                    <circle cx="112" cy="44" r="8"/>
+                    <circle cx="170" cy="136" r="8"/>
+                    <circle cx="238" cy="120" r="8"/>
+                  </g>
+                  <g fill="var(--surface)" stroke="var(--shot-c, var(--accent))" stroke-width="2">
+                    <circle cx="120" cy="100" r="9.5"/>
+                    <circle cx="196" cy="68" r="9.5"/>
+                  </g>
+                  <circle cx="46" cy="122" r="13" fill="var(--shot-c, var(--accent))" fill-opacity=".16" stroke="var(--shot-c, var(--accent))" stroke-width="2"/>
+                  <circle cx="46" cy="122" r="4.5" fill="var(--shot-c, var(--accent))"/>
+                  <rect x="252" y="40" width="44" height="36" rx="10" fill="var(--shot-c, var(--accent))" fill-opacity=".1" stroke="var(--shot-c, var(--accent))" stroke-width="2"/>
+                  <g fill="var(--shot-c, var(--accent))" opacity=".6">
+                    <rect x="262" y="51" width="7" height="7" rx="2"/>
+                    <rect x="276" y="51" width="7" height="7" rx="2"/>
+                    <rect x="262" y="62" width="7" height="7" rx="2"/>
+                    <rect x="276" y="62" width="7" height="7" rx="2"/>
+                  </g>
+                  <text class="illus-cap" x="46" y="148" text-anchor="middle">You</text>
+                  <text class="illus-cap" x="274" y="92" text-anchor="middle">Target</text>
+                </svg>
               </div>
             </div>
           </div>
         </div>
-        <span class="year">2025</span>
-        <h3>Her Next Words: Writing Buddy</h3>
-        <p>A daily writing companion built just for my mother-in-law, with rotating prompts on career, confidence, and storytelling, plus a built-in editor for drafting and revisiting pieces over time.</p>
+        <span class="year">2026</span>
+        <h3>Find My "In": LinkedIn Search Agent</h3>
+        <p>Given a list of companies, searches LinkedIn for personal connections, alumni from past jobs, product leaders, and recruiters when user is seeking a referral for a job application.</p>
         <div class="proj-foot">
-          <span class="pill">Web app</span>
+          <span class="pill">Agent</span>
           <div class="proj-links">
-            <a class="visit" href="https://hernextwords.netlify.app/" target="_blank" rel="noopener">Web URL <span class="arrow">↗</span></a>
-            <a class="visit" href="https://github.com/lenniez/hernextwords" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
+            <a class="visit" href="https://github.com/lenniez/findmyin" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
           </div>
         </div>
       </div>
-
 
       <div class="proj-card" style="--card-c:var(--accent-4)">
         <div class="shot-wrap">
@@ -732,12 +701,37 @@
         </div>
       </div>
 
+
+      <div class="proj-card" style="--card-c:var(--accent-2)">
+        <div class="shot-wrap">
+          <div class="carousel" style="--car-c:var(--accent-2)">
+            <div class="carousel-track">
+              <div class="shot real slide" style="--shot-c:var(--accent-2)">
+                <img src="images/her-next-words-1.jpg" alt="Her Next Words: a daily writing prompt with a note from her kids">
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="year">2025</span>
+        <h3>Her Next Words: Writing Buddy</h3>
+        <p>A daily writing companion built just for my mother-in-law, with rotating prompts on career, confidence, and storytelling, plus a built-in editor for drafting and revisiting pieces over time.</p>
+        <div class="proj-foot">
+          <span class="pill">Web app</span>
+          <div class="proj-links">
+            <a class="visit" href="https://hernextwords.netlify.app/" target="_blank" rel="noopener">Web URL <span class="arrow">↗</span></a>
+            <a class="visit" href="https://github.com/lenniez/hernextwords" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
+          </div>
+        </div>
+      </div>
+
       <div class="proj-card" style="--card-c:var(--accent)">
         <div class="shot-wrap">
           <div class="carousel" style="--car-c:var(--accent)">
             <div class="carousel-track">
-              <div class="shot real brand slide" style="--brand-bg:#66BCDE">
-                <img src="images/the-twist-1.png" alt="The Twist logo: a stylized twisting ribbon beneath a yellow sun">
+              <div class="shot real tall slide" style="--shot-c:var(--accent)">
+                <div class="phone">
+                  <img src="images/the-twist-phone.jpg" alt="The Twist mobile app splash screen: a yellow sun over a twisting ribbon, on sky blue">
+                </div>
               </div>
             </div>
           </div>
